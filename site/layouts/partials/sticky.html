@@ -4,6 +4,7 @@
 	::-moz-selection, .panel-links *::-moz-selection, blockquote *::-moz-selection{color:inherit;background:transparent;}
 	h2::selection, h3::selection, h4::selection, h4 *::selection, p::selection, p *::selection, table *::selection, address::selection, figcaption::selection, figcaption *::selection{background:#fd6f22;}
 	h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h4 *::-moz-selection, p::-moz-selection, p *::-moz-selection, table *::-moz-selection, address::-moz-selection, figcaption::-moz-selection, figcaption *::-moz-selection{background:#fd6f22;}
+
   /* Concision in style, precision in thought, decision in life. – Victor Hugo */
 	summary::-webkit-details-marker {
 		display: none
@@ -52,7 +53,6 @@
 	  cursor: move;
 	}
 
-
 	.inspect-heading summary:before {
 		background: rgba(0, 0, 0, .1);
 		border-radius: 99px;
@@ -85,13 +85,13 @@
 	    min-width: 15px;
 	}
 
-	details, summary { display: block; }
-	summary { cursor: pointer;}
-	details:hover { background: rgba(0, 0, 0, .04); }
-	ul { list-style: none; padding: 0; }
-	li:nth-child(odd) { background: rgba(0, 0, 0, .015); } /* tiger striping */
-	li p { margin-left:calc(2rem + 6px); }
-	code {color:blue;}
+	#sticky-inspect details, #sticky-inspect summary { display: block; }
+	#sticky-inspect summary { cursor: pointer;}
+	#sticky-inspect details:hover { background: rgba(0, 0, 0, .04); }
+	#sticky-inspect ul { list-style: none; padding: 0; }
+	#sticky-inspect li:nth-child(odd) { background: rgba(0, 0, 0, .015); } /* tiger striping */
+	#sticky-inspect li p { margin-left:calc(2rem + 6px); }
+	#sticky-inspect code {color:blue;}
 </style>
 <aside draggable="true" id="sticky-inspect">
   <header onclick="toggle();">&#9587;</header>

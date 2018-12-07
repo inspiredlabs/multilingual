@@ -86,6 +86,30 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
 
+
+      - file: "site/content/banner/_index.md"
+        label: "Banner"
+        name: "banner"
+        fields:
+          - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Banner
+            name: banner
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
+
+
+
+
+
+
+
+
+
       - file: "site/content/aggregate/_index.md"
         label: "aggregate Page"
         name: "aggregate"
@@ -102,7 +126,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-          
+
           - label: Contact Entries
             name: contact_entries
             widget: list

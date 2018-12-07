@@ -5,7 +5,9 @@ title = "Homepage"
 ## As of v0.20, all content files include a default "categories" value that's the same as the section. This was a cheap future-proofing method and should/could be changed accordingly.
 [taxonomies]
   region = "regions"
+  price = "prices"
 
   [Params.widgets]
       #search = true # Enable "Search" widget
       region = "regions"
+      price = "prices"
