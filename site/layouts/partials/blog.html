@@ -5,7 +5,7 @@
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
 			{{ range first 4 (where .Data.Pages "Type" "post") }}
-				<div class="ph1-ns w-50-ns flex">
+				<div class="ph1-ns w-100 flex" style="background: ghostwhite;">
 					{{ .Render "li" }}
 				</div>
 			{{ end }}

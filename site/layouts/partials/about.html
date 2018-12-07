@@ -1,11 +1,11 @@
 <div class="bg-off-white pv4">
 	<div class="ph3 mw7 center">
 
-		<h2 class="f2 b lh-title mb3">Price</h1>
+		<h2 class="f2 b lh-title mb3">Only the first post</h1>
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 24 (where .Data.Pages "Type" "price") }}
-				<div class="ph1-ns w-50-ns flex">
+			{{ range first 1 (where .Data.Pages "Type" "post") }}
+				<div class="ph1-ns w-100 flex" style="background: cyan;">
 					{{ .Render "li" }}
 				</div>
 			{{ end }}

@@ -1,15 +1,12 @@
 ---
 region: en
-title: Great coffee with a conscience
-subtitle: Support sustainable farming while enjoying a cup
+title: Organic treats from the heart of Italy
+subtitle: Marzò – a blend of fresh produce shared with those with good fortune.
 image: /img/home-jumbotron.jpg
 blurb:
-  heading: Why Kaldi?
+  heading: blurb heading
   text: >-
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    ...blurb text
 intro:
   heading: What we offer
   text: >-
