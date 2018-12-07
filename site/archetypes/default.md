@@ -1,4 +1,6 @@
 ---
 region: en
-title: "New page"
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+weight: 999
 ---
