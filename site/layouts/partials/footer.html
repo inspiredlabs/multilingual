@@ -34,13 +34,22 @@
 			</div>
 
 			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
+				<h3 class="f4 b lh-title mb2 primary">Social media</h3>			
 				<ul class="mhn2">
+				  {{- range .Site.Params.links -}}
+					<li>
+				    <a href="{{ .url }}" title="{{ .title }}">
+				      <span class="">{{ .title }}</span>
+				    </a>
+				  </li>
+				  {{- end -}}
+				</ul>
+				<!--ul class="mhn2">
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
+				</ul-->
 			</div>
 
 		</div>

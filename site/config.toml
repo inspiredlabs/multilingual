@@ -8,6 +8,20 @@ title = "Homepage"
   price = "prices"
 
   [Params.widgets]
-      #search = true # Enable "Search" widget
-      region = "regions"
-      price = "prices"
+    #search = true # Enable "Search" widget
+    region = "regions"
+    price = "prices"
+
+
+[Params]
+  [[Params.links]]
+    title = "Email"
+    url = "mailto:francesca.tomassini@gmail.com"
+
+  [[Params.links]]
+    title = "Facebook"
+    url = "https://facebook.com/agricolamarzo/"
+
+  [[Params.links]]
+    title = "Instagram"
+    url = "https://instagram.com/agricolamarzo/"

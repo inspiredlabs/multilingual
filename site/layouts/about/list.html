@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Latest stories") }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "About") }}
 
-<div class="mw7 center" style="background-color: wheat;">
+<div class="mw7 center" style="background-color: skyblue;">
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range (.Paginator 24).Pages.ByPublishDate }}
           <div class="w-100 ph1-ns flex"><!-- w-50-ns -->

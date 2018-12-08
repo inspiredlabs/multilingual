@@ -1,42 +1,19 @@
 ---
-region: it
-title: Values
+region: en
+title: What we do
 image: /img/about-jumbotron.jpg
 values:
-  - heading: Shade-grown coffee
-    imageUrl: /img/about-shade-grown.jpg
+  - heading: Hemp (Cannabis Sativa)
+    imageUrl: /images/1200x675/IMG_20170906-cu.jpg
     text: >
-      Coffee is a small tree or shrub that grows in the forest understory in its
-      wild form, and traditionally was grown commercially under other trees that
-      provided shade. The forest-like structure of shade coffee farms provides
-      habitat for a great number of migratory and resident species.
-  - heading: Single origin
-    imageUrl: /img/about-single-origin.jpg
+      Growing hemp means rediscovering ancient seeds – which are nurtured by, and bound to, a distinctive piece of land and soil. Hemp tells a different story of farming: a story of daily care, respect and resource preservation.
+  - heading: Saffron
+    imageUrl: /images/1200x675/IMG_9902.jpg
     text: >
-      Single-origin coffee is coffee grown within a single known geographic
-      origin. Sometimes, this is a single farm or a specific collection of beans
-      from a single country. The name of the coffee is then usually the place it
-      was grown to whatever degree available.
-  - heading: Sustainable farming
-    imageUrl: /img/about-sustainable-farming.jpg
+      We grow Saffron with lots of love and hard work. After meticulously sorting the stigmas (the female part of the flower that produces the saffron spice), we dry them at low temperatures to lock in aroma and taste.
+  - heading: Extra virgin olive oil
+    imageUrl: /images/1200x675/IMG_20171125.jpg
     text: >
-      Sustainable agriculture is farming in sustainable ways based on an
-      understanding of ecosystem services, the study of relationships between
-      organisms and their environment. What grows where and how it is grown are
-      a matter of choice and careful consideration for nature and communities.
-  - heading: Direct sourcing
-    imageUrl: /img/about-direct-sourcing.jpg
-    text: >
-      We want to truly empower the communities that bring amazing coffee to you.
-      That’s why we reinvest 20% of our profits into farms, local businesses and
-      schools everywhere our coffee is grown. You can see the communities grow
-      and learn more about coffee farming on our blog.
-  - heading: Reinvest profits
-    imageUrl: /img/about-reinvest-profits.jpg
-    text: >
-      We want to truly empower the communities that bring amazing coffee to you.
-      That’s why we reinvest 20% of our profits into farms, local businesses and
-      schools everywhere our coffee is grown. You can see the communities grow
-      and learn more about coffee farming on our blog.
+      We work to preserve the ancient art of growing olive trees. We are mindful of protecting our environment and landscape. And we are committed to promoting and developing a culture of olive oil – inviting anyone who chooses liquid gold for their kitchen to become a discerning customer. As producers, we apply ethics that value the Italian craft of nurturing olive groves to extract exquisite oil – in the multitude of local varieties that enrich our *Bel Paese*.
 ---
 
