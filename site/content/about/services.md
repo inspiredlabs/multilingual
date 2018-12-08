@@ -1,5 +1,5 @@
 ---
-region: it
+region: en
 title: 'Services'
 date: 2018-12-07T10:14:48.939Z
 description: ''
@@ -8,7 +8,6 @@ weight: 5
 ---
 
 ## On our farm
-
 ### Services
 
 Need a hand for a special occasion? We also supply hampers and Italian style party favours to your friends or family. [Email us](#contact), or [call us](#call) now.
