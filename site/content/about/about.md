@@ -1,9 +1,8 @@
 ---
-region: it
-title: 'About'
+region: en
+title: About
 date: 2018-12-07T10:14:48.939Z
 description: 'Summary: defaults work.'
-weight: 1
 ---
 
 ## Raffaele and Francesca are, Marzò
