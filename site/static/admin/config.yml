@@ -23,6 +23,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it }
+      - {label: "Order", name: "weight", widget: number, default: 999 }
       - {label: "Title", name: "title", widget: "string", default: "About" }
       - {label: "Price", name: "price", widget: "string", default "€10.00 + P&P" }
       - {label: "Summary", name: "description", widget: "text", default: "Summary"}
