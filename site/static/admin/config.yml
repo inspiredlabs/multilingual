@@ -5,6 +5,31 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "about" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "About" # Used in the UI, ie.: "New Post"
+    folder: "site/content/about" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it }
+      - {label: "Title", name: "title", widget: "string", default: "About" }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Summary", name: "description", widget: "text", default: "Summary"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "price" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Price" # Used in the UI, ie.: "New Post"
+    folder: "site/content/price" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it }
+      - {label: "Title", name: "title", widget: "string", default: "About" }
+      - {label: "Price", name: "price", widget: "string", default "€10.00 + P&P" }
+      - {label: "Summary", name: "description", widget: "text", default: "Summary"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -13,7 +38,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it }
       - {label: "Title", name: "title", widget: "string", default: "New Post" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text", default: "Summary"}
+      - {label: "Summary", name: "description", widget: "text", default: "Summary"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
@@ -102,14 +127,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
 
-
-
-
-
-
-
-
-
+# bringing together sections and partials
       - file: "site/content/aggregate/_index.md"
         label: "aggregate Page"
         name: "aggregate"
