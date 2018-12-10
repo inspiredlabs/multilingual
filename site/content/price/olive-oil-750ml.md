@@ -1,7 +1,7 @@
 ---
 region: en
 title: 'Extra Virgin Olive Oil, 0.75L'
-image: /img/blog-chemex.jpg
+image: /images/1200x675/product-00-olive-oil-750.jpg
 date: 2018-12-07T10:14:48.939Z
 description: 'Delicious, spicy green, & calorie rich.'
 price: '€14.00 + P&P'

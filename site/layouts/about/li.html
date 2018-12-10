@@ -1,12 +1,33 @@
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
-    </div>
-    <div class="cms mw6">
+<article class="athelas pa4">
+    <h1 class="f3 f1-m f-headline-l tc">{{.Title}}</h1>
+    <!--p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p-->
+    <!--p>Read in {{ .ReadingTime }} minutes</p-->
+    <div class="f5 f4-ns lh-copy measure center">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
-  </div>
+</article>
+
+<!--article>
+  <h1 class="f3 f1-m f-headline-l tc">About</h1>
+  <h2 class="f4 f2-m f-headline tc">Raffaele and Francesca are, Marzò</h2>
+
+  <blockquote class="ph0 f4 f1-ns measure-narrow center">
+    <p class="fw9 lh-copy lh-title-ns tc">Marzò is a fresco of family, friends, hard work and chance encounters.</p>
+  </blockquote>
+
+  <p class="f5 f4-ns lh-copy measure center">
+    Marzò is Uncle Angelo who picks everything at the right time — because it’s better to do today what others postpone until tomorrow. It's Enrico who holds the photographic memory of the family. Marzò is Nonna Mia, who raises our children with the commitment of a climb, nonchalantly in her stride. And Nonna Ita who serves herbal tea down in the cold olive grove.
+  </p>
+  <p class="f5 f4-ns lh-copy measure center">
+    Marzò is our idea of a family business. But throughout each hectic day, right at the centre of all we do, is our heartbeat: little Martino and Ettore — brimming with life and laughter.
+  </p>
+  <p class="f5 f4-ns lh-copy measure center">
+    We are Marzò.
+  </p>
+
+  <blockquote class="ph0 f4 f1-ns measure-narrow center">
+    <p class="fw9 lh-copy lh-title-ns tc">Welcome</p>
+  </blockquote>
+</article-->

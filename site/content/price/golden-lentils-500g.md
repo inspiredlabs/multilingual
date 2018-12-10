@@ -1,7 +1,7 @@
 ---
 region: en
 title: 'Golden Lentils, 500g'
-image: /img/blog-chemex.jpg
+image: /images/1200x675/product-0x-lentils.jpg
 date: 2018-12-07T10:14:48.939Z
 description: 'Perfect for medleys, side-dishes and adding into vegetable lasagne.'
 price: '€4.00 + P&P'

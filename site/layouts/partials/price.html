@@ -1,19 +1,11 @@
-<div class="bg-off-white pv4">
-	<div class="ph3 mw7 center">
 
-		<h2 class="f2 b lh-title mb3">Price</h1>
 
-		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 24 (where .Data.Pages "Type" "price") }}
-				<div class="ph1-ns w-50-ns flex">
-					{{ .Render "li" }}
-				</div>
-			{{ end }}
-		</div>
-
-		<!--div class="tc">
-			<a href="/post" class="btn raise">Read more</a>
-		</div-->
-
+<div class="f5 f4-ns avenir w-100 pa3 ph4-m ph5-l bg-white">
+	<div class="w-100 flex-ns flex-wrap mb3">
+		{{ range first 24 (where .Data.Pages "Type" "price") }}
+			<div class="ph1-ns w-third-ns flex">
+				{{ .Render "li" }}
+			</div>
+		{{ end }}
 	</div>
 </div>

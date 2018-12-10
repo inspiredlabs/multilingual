@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="{{ .Params.region }}">
   {{ partial "head" . }}
-  <body class="sans-serif">
+  <body id="home" class="bg-black">
     {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }}
+    <main class="bg-white">
+	    {{ block "main" . }}{{ end }}
+    </main>
     {{ partial "footer" . }}
     {{ partial "sticky" . }} 
   </body>

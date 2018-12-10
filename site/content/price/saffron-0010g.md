@@ -1,7 +1,7 @@
 ---
 region: en
 title: 'Saffron, 0.1g'
-image: /img/blog-chemex.jpg
+image: /images/1200x675/product-00-zafferano-jar.jpg
 date: 2018-12-07T10:14:48.939Z
 description: 'Elevate and infuse any dish with this deluxe spice.'
 price: '€4.00 + P&P'

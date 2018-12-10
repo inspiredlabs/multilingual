@@ -1,7 +1,7 @@
 ---
 region: en
 title: 'Hemp Tea. Monoica bushel 10g'
-image: /img/blog-chemex.jpg
+image: /images/1200x675/product-00-canapa.jpg
 date: 2018-12-07T10:14:48.939Z
 description: 'Indulgent and relaxing.'
 price: '€8.00 + P&P'
