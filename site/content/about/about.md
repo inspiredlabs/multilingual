@@ -1,14 +1,14 @@
 ---
 region: en
-title: About
 date: 2018-12-07T10:14:48.939Z
-description: 'Summary: defaults work.'
+title: 'About'
+subtitle: 'Raffaele and Francesca are, Marzò'
+opening: 'Marzò is a fresco of family, friends, hard work and chance encounters.'
+closing: 'Welcome'
+image: 
+description: ''
 weight: 1
 ---
-
-## Raffaele and Francesca are, Marzò
-
-> Marzò is a fresco of family, friends, hard work and chance encounters.
 
 Marzò is Uncle Angelo who picks everything at the right time — because it’s better to do today what others postpone until tomorrow. It's Enrico who holds the photographic memory of the family. Marzò is Nonna Mia, who raises our children with the commitment of a climb, nonchalantly in her stride. And Nonna Ita who serves herbal tea down in the cold olive grove.
 
@@ -19,5 +19,3 @@ Marzò is Auntie Martina, who lights up the room with every visit and steals awa
 Marzò is our idea of a family business. But throughout each hectic day, right at the centre of all we do, is our heartbeat: little Martino and Ettore — brimming with life and laughter.
 
 We are Marzò.
-
-> Welcome

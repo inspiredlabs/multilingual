@@ -11,11 +11,14 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: 'Region', name: 'region', widget: 'select', options: ['en', 'it'], required: true, default: it }
-      - {label: "Title", name: "title", widget: "string", default: "About" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Summary", name: "description", widget: "text", default: "Summary"}
-      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Title", name: "title", widget: "string", default: "About" }
+      - {label: "Subtitle", name: "subtitle", widget: "text", default: "Subtitle"}
+      - {label: "Opening Quote", name: "opening", widget: "text", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Closing Quote", name: "closing", widget: "text", default: ""}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      # {label: "Summary", name: "description", widget: "text", default: "Summary"}
 
   - name: "price" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Price" # Used in the UI, ie.: "New Post"
@@ -30,6 +33,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Call to action", name: "cta", widget: "markdown", default: "[Enquire](mailto:francesca.tomassini@gmail.com?subject=Website,%20500g%20enquiry.&body=Please%20tell%20me%20how%20much%20it%20is%20to%20post%20to%20my%20address%3A%0D%0A%0D%0A%0D%0APostcode%3A%0D%0A%0D%0A%0D%0A%0D%0A%20Thank%20you%0D%0A%0D%0A%0D%0A%0D%0A)"}
       # {label: "Body", name: "body", widget: "markdown"}
+        # Experiment: {{ .Content }}
 
 
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
