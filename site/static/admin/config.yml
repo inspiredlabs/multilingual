@@ -28,7 +28,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Price", name: "price", widget: "string", default "€10.00 + P&P" }
       - {label: "Summary", name: "description", widget: "text", default: "Summary"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Call to action", name: "cta", widget: "markdown", default: "[Enquire](mailto:francesca.tomassini@gmail.com?subject=Website,%20500g%20enquiry.&body=Please%20tell%20me%20how%20much%20it%20is%20to%20post%20to%20my%20address%3A%0D%0A%0D%0A%0D%0APostcode%3A%0D%0A%0D%0A%0D%0A%0D%0A%20Thank%20you%0D%0A%0D%0A%0D%0A%0D%0A)"}
+      # {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
