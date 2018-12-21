@@ -1,8 +1,8 @@
 ---
 region: en
 date: 2018-12-07T10:14:48.939Z
-title: 'Hemp'
-subtitle: '(Cannabis Sativa)'
+title: 'What we do'
+subtitle: 'Hemp (Cannabis Sativa)'
 opening: ''
 closing: ''
 image: /images/1200x675/IMG_20170906-cu.jpg

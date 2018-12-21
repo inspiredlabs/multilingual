@@ -20,6 +20,7 @@
 		min-width:18rem;
 		height:2rem;
 		width:18rem;
+		max-width:42rem;		
 		max-height: 99%;
 		background: lemonchiffon; /* rapidtables.com/web/color/Yellow_Color.html */
 		overflow-x: hidden;
@@ -88,13 +89,38 @@
 	#sticky-inspect details, #sticky-inspect summary { display: block; }
 	#sticky-inspect summary { cursor: pointer;}
 	#sticky-inspect details:hover { background: rgba(0, 0, 0, .04); }
+
+
+
+	.decimal ol {  display: block; }
+	.decimal li { list-style:decimal; }
+	.inspect > ul li { list-style: none; color: red; }
+	
+
+	
 	#sticky-inspect ul { list-style: none; padding: 0; }
 	#sticky-inspect li:nth-child(odd) { background: rgba(0, 0, 0, .015); } /* tiger striping */
 	#sticky-inspect li p { margin-left:calc(2rem + 6px); }
-	#sticky-inspect code {color:blue;}
+	#sticky-inspect code { color:blue; }
 </style>
 <aside draggable="true" id="sticky-inspect">
-  <header onclick="toggle();">&#9587;</header>
+  <header onclick="toggle();"><code>{{ .Data }}</code> &#9587;</header>
+	  <p>
+    	<ol class="decimal">
+	    	{{ range .Pages }}  		
+	    	<li >
+	  		  <details class="inspect">
+			    <summary>{{ .Title }}</summary>
+	    			<ul class="">
+	      			<li><a href="{{ .URL }}">{{ .URL }}</a></li>
+	    				<li>{{ .Params.region }}</li>    			
+	    				<li>{{ .Title }}</li>
+	    			</ul>
+				  </details>
+				</li>
+	    	{{ end }}			
+    	</ol>
+	  </p>
   <ul style="padding:1rem;">
     <li>
       <details class="inspect-heading">
@@ -104,14 +130,14 @@
         <ul>
           <li>
             <details class="inspect">
-              <summary>For `regionSelect`:<code>{{ .Params.region }}</code> Custom: &#123;&#123; .Params.region &#125;&#125;</summary>
-              <!-- TMI .Params &#125;&#125; TMI -->
+              <summary>For `regionSelect`:<code>{{ .Params.region }}</code> Custom: &#123;&#123; .Params.region &#123;&#123;</summary>
+              <!-- TMI .Params &#123;&#123; TMI -->
               <p>test</p>
             </details>
           </li>
           <li>
             <details class="inspect">
-              <summary>For `bLazy`:<code>{{ .Params.image }}</code> &#123;&#123; .Params.image &#125;&#125;</summary>
+              <summary>For `bLazy`:<code>{{ .Params.image }}</code> &#123;&#123; .Params.image &#123;&#123;</summary>
               <p>test</p>
             </details>
           </li>
@@ -148,13 +174,13 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .Description }}</code> &#123;&#123;.Description&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">Front-matter blurb &#125;&#125;description&#125;&#125;</a></p>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">Front-matter blurb &#123;&#123;description&#125;&#125;</a></p>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .Dir }}</code> &#123;&#123;.Dir&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">path is relative to the &#125;&#125;content&#125;&#125; folder</a></p>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">path is relative to the &#123;&#123;content&#125;&#125; folder</a></p>
           </details>
         </li>
         <li>
@@ -190,25 +216,25 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .IsHome }}</code> &#123;&#123;.IsHome&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/templates/homepage/">&#125;&#125;true&#125;&#125; context</a>
+            <p><a href="https://gohugo.io/templates/homepage/">&#123;&#123;true&#125;&#125; context</a>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .IsNode }}</code> &#123;&#123;.IsNode&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">always &#125;&#125;false&#125;&#125; for regular content</a>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">always &#123;&#123;false&#125;&#125; for regular content</a>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .IsPage }}</code> &#123;&#123;.IsPage&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">always &#125;&#125;true&#125;&#125; for regular content</a>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">always &#123;&#123;true&#125;&#125; for regular content</a>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .IsTranslated }}</code>  &#123;&#123;.IsTranslated&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">&#125;&#125;true&#125;&#125; for real translations</a></p>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">&#123;&#123;true&#125;&#125; for real translations</a></p>
           </details>
         </li>
         <li>
@@ -221,9 +247,9 @@
           <details class="inspect">
             <summary><code>{{ .Kind }}</code> &#123;&#123;.Kind&#125;&#125;</summary>
             <p><a href="https://gohugo.io/variables/page/#page-variables">
-              &#125;&#125;page&#125;&#125;, &#125;&#125;home&#125;&#125;,
-              &#125;&#125;section&#125;&#125;, &#125;&#125;taxonomy&#125;&#125;,
-              &#125;&#125;taxonomyTerm&#125;&#125;.</a>
+              &#123;&#123;page&#125;&#125;, &#123;&#123;home&#125;&#125;,
+              &#123;&#123;section&#125;&#125;, &#123;&#123;taxonomy&#125;&#125;,
+              &#123;&#123;taxonomyTerm&#125;&#125;.</a>
             </p>
           </details>
         </li>
@@ -236,19 +262,19 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .Language }}</code> &#123;&#123;.Language&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">object that points to the definition in the site &#125;&#125;config&#123;&#123;.</a>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">object that points to the definition in the site &#123;&#123;config&#123;&#123;.</a>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .Lastmod }}</code> &#123;&#123;.Lastmod&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/git/">&#125;&#125;lastmod&#125;&#125; field in front-matter or: &#123;&#123;.GitInfo&#123;&#123;.</a></p>
+            <p><a href="https://gohugo.io/variables/git/">&#123;&#123;lastmod&#125;&#125; field in front-matter or: &#123;&#123;.GitInfo&#123;&#123;.</a></p>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .LinkTitle }}</code> &#123;&#123;.LinkTitle&#125;&#125;</summary>
-            <p><a href="https://gohugo.io/variables/page/#page-variables">access when creating links to the content. If set, Hugo will use the &#125;&#125;linktitle&#125;&#125; from the front-matter before &#125;&#125;title&#123;&#123;.</a></p>
+            <p><a href="https://gohugo.io/variables/page/#page-variables">access when creating links to the content. If set, Hugo will use the &#123;&#123;linktitle&#125;&#125; from the front-matter before &#123;&#123;title&#123;&#123;.</a></p>
           </details>
         </li>
         <li>
@@ -293,7 +319,7 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .PublishDate }}</code> &#123;&#123;.PublishDate&#125;&#125;</summary>
-            <p>the date on which the content was or will be published; &#123;&#123;.Publishdate&#125;&#125; pulls from the &#125;&#125;publishdate&#125;&#125; field in a content’s front-matter. See also &#123;&#123;.ExpiryDate&#125;&#125;, &#123;&#123;.Date&#125;&#125;, and &#123;&#123;.Lastmod.</p>
+            <p>the date on which the content was or will be published; &#123;&#123;.Publishdate&#125;&#125; pulls from the &#123;&#123;publishdate&#125;&#125; field in a content’s front-matter. See also &#123;&#123;.ExpiryDate&#125;&#125;, &#123;&#123;.Date&#125;&#125;, and &#123;&#123;.Lastmod.</p>
           </details>
         </li>
         <li>
@@ -341,7 +367,7 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .Summary }}</code> &#123;&#123;.Summary&#125;&#125;</summary>
-            <p>a generated summary of the content for easily showing a snippet in a summary view. The breakpoint can be set manually by commenting &#125;&#125;&lt;!--more--&gt;&#125;&#125; at the appropriate place in the content page. See <a href="https://gohugo.io/content-management/summaries/">Content Summaries</a> for more details.</p>
+            <p>a generated summary of the content for easily showing a snippet in a summary view. The breakpoint can be set manually by commenting &#123;&#123;&lt;!--more--&gt;&#125;&#125; at the appropriate place in the content page. See <a href="https://gohugo.io/content-management/summaries/">Content Summaries</a> for more details.</p>
           </details>
         </li>
         <li>
@@ -359,13 +385,13 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .Truncated }}</code> &#123;&#123;.Truncated&#125;&#125;</summary>
-            <p>a boolean, &#125;&#125;true&#125;&#125; if the &#123;&#123;.Summary&#125;&#125; is truncated. Useful for showing a “Read more…” link only when necessary. See <a href="https://gohugo.io/content-management/summaries/">Summaries</a> for more information.</p>
+            <p>a boolean, &#123;&#123;true&#125;&#125; if the &#123;&#123;.Summary&#125;&#125; is truncated. Useful for showing a “Read more…” link only when necessary. See <a href="https://gohugo.io/content-management/summaries/">Summaries</a> for more information.</p>
           </details>
         </li>
         <li>
           <details class="inspect">
             <summary><code>{{ .Type }}</code> &#123;&#123;.Type&#125;&#125;</summary>
-            <p>the <a href="https://gohugo.io/content-management/types/">content type</a>, eg: &#125;&#125;post&#123;&#123;.</p>
+            <p>the <a href="https://gohugo.io/content-management/types/">content type</a>, eg: &#123;&#123;post&#123;&#123;.</p>
           </details>
         </li>
         <li>
@@ -403,10 +429,10 @@
         <li>
           <details class="inspect">
             <summary>&#123;&#123;.InSection $anotherPage&#125;&#125;</summary>
-            <p>Whether the given page is in the current section. Note that this will always return &#125;&#125;false&#125;&#125; for pages that are not either <a href="https://gohugo.io/variables/site/#site-pages">regular</a>, home or <a href="https://gohugo.io/templates/section-templates/">section pages</a>.</p>
+            <p>Whether the given page is in the current section. Note that this will always return &#123;&#123;false&#125;&#125; for pages that are not either <a href="https://gohugo.io/variables/site/#site-pages">regular</a>, home or <a href="https://gohugo.io/templates/section-templates/">section pages</a>.</p>
             <p>Hugo generates a section tree that matches your content.</p>
-            <p>A Section is a collection of pages that gets defined based on the organization structure under the &#125;&#125;content/&#125;&#125; directory.</p>
-            <p>By default, all the <b>first-level</b> directories under &#125;&#125;content/&#125;&#125; form their own sections (<b>root sections</b>).</p>
+            <p>A Section is a collection of pages that gets defined based on the organization structure under the &#123;&#123;content/&#125;&#125; directory.</p>
+            <p>By default, all the <b>first-level</b> directories under &#123;&#123;content/&#125;&#125; form their own sections (<b>root sections</b>).</p>
             <p>See <a href="https://gohugo.io/content-management/sections/#nested-sections">nested sections</a>.
               <i>This has been intentionally omitted.</i>
             </p>
@@ -442,7 +468,7 @@
         <li>
           <details class="inspect">
             <summary><code>{{ .Data.Singular }}</code>	 &#123;&#123;.Data.Singular&#125;&#125;</summary>
-            <p>The singular name of the taxonomy (e.g., &#125;&#125;tags => tag&#125;&#125;).</p>
+            <p>The singular name of the taxonomy (e.g., &#123;&#123;tags => tag&#125;&#125;).</p>
           </details>
         </li>
         <li>
