@@ -91,9 +91,10 @@
 	#sticky-inspect details:hover { background: rgba(0, 0, 0, .04); }
 
 
-
+	/* Consider cleaning this up: https://stackoverflow.com/questions/958170/how-do-i-prevent-css-inheritance */
+	/* https://duckduckgo.com/?q=css+declaration+to+exclude+children+inheriting */
 	.decimal ol {  display: block; }
-	.decimal li { list-style:decimal; }
+	.decimal li { list-style:decimal; } /*https://www.w3schools.com/CSSref/pr_list-style-type.asp*/
 	.inspect > ul li { list-style: none; color: red; }
 	
 
